@@ -1,2 +1,2 @@
 # likethebootstrap
-WP theme based on Bootstrap
+WP theme based on Bootstrap with LESS
