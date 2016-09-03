@@ -8392,6 +8392,10 @@ h2 .entry-title,
     color: #737373;
   }
 }
+.page-header {
+  margin: 12px 0 24px;
+  border-bottom: none;
+}
 ul,
 ol {
   margin-top: 0;
