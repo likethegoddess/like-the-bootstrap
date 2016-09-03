@@ -8345,6 +8345,9 @@ button.close {
 .container > .row {
   padding: 120px 0;
 }
+.page .container > .row {
+  padding: 72px 0 120px;
+}
 .post {
   overflow: hidden;
 }
