@@ -57,5 +57,9 @@
 			?>
     </div>
 	</nav>
-
+<?php if ( has_post_thumbnail() && is_page() ) { ?>
+	<div class="cover"> 
+		<figure><?php the_post_thumbnail('full', array( 'class' => 'img-responsive' ) ); ?></figure> 
+  </div>
+<?php } ?>	
   <div class="container">
