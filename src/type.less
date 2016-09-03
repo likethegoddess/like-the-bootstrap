@@ -17,9 +17,9 @@
 		}
 	}
 }
-.single h1 {
+.archive .post h1 {
 	&.entry-title {
-		margin-bottom: (@line-height-computed * 2);
+		font-size: (@font-size-h1 * .625);
 	}
 }
 
@@ -52,6 +52,14 @@ p.copyright {
     font-size: @font-size-base;
 		color: @gray; 
   }
+}
+
+// Page header
+// -------------------------
+
+.page-header {
+  margin: (@line-height-computed * .5) 0 @line-height-computed;
+  border-bottom: none;
 }
 
 // Lists
@@ -119,4 +127,16 @@ blockquote {
 		margin-left: 0; 
     margin-right: 0; 
 	}
+}
+
+// Blog
+.metadata {
+	margin-bottom: (@line-height-computed * 2);
+}
+
+.byline {
+	margin-right: (@line-height-computed * .75); 
+}
+.fa-calendar {
+	padding-right: (@line-height-computed * .2); 
 }

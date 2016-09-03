@@ -1,10 +1,10 @@
 /*
-Theme Name: Like the Bootstrap
-Theme URI: http://likethebootstrap.com
+Theme Name: Like the Goddess Bootstrap Less
+Theme URI: http://likethegoddess.com
 Description: A responsive theme built with Bootstrap and Less
 Author: Diana Thompson
 Author URI: http://likethegoddess.com
-Version: 1.0.0
+Version: 1.0
 Tags: responsive, bootstrap
 */
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
@@ -8360,8 +8360,8 @@ button.close {
     font-size: 47.5px;
   }
 }
-.single h1.entry-title {
-  margin-bottom: 48px;
+.archive .post h1.entry-title {
+  font-size: 23.75px;
 }
 h2 small,
 .h2 small {
@@ -8388,6 +8388,10 @@ h2 .entry-title,
     font-size: 15px;
     color: #737373;
   }
+}
+.page-header {
+  margin: 12px 0 24px;
+  border-bottom: none;
 }
 ul,
 ol {
@@ -8446,6 +8450,15 @@ blockquote {
     margin-left: 0;
     margin-right: 0;
   }
+}
+.metadata {
+  margin-bottom: 48px;
+}
+.byline {
+  margin-right: 18px;
+}
+.fa-calendar {
+  padding-right: 4.8px;
 }
 input[type="submit"].btn-block {
   color: #595959 !important;
