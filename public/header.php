@@ -13,6 +13,7 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
+		<script src="https://use.fontawesome.com/6a77217615.js"></script>
     <?php wp_head(); ?>
   </head>
 	<body <?php body_class(); ?>>
