@@ -4,7 +4,7 @@ Theme URI: http://likethegoddess.com
 Description: A responsive theme built with Bootstrap and Less
 Author: Diana Thompson
 Author URI: http://likethegoddess.com
-Version: 1.0
+Version: 1.0.1
 Tags: responsive, bootstrap
 */
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
@@ -8470,6 +8470,10 @@ button.search-submit:hover,
 input.button:hover {
   color: #fff;
   background-color: #222222;
+}
+.dropdown-menu {
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.175);
 }
 input[type="radio"],
 input[type="checkbox"] {
