@@ -8474,6 +8474,9 @@ input[type="checkbox"] {
   margin: 8px 12px 0 0;
   margin-top: 5px \9;
 }
+.navbar {
+  margin-bottom: 0;
+}
 @media (min-width: 768px) {
   #primary-navbar-collapse {
     float: left;
