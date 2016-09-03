@@ -8539,6 +8539,27 @@ table > tfoot > tr > td {
     display: block;
   }
 }
+.page .cover {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+@media (min-width: 992px) {
+  .page .cover {
+    height: 400px;
+  }
+}
+.page .cover img.img-responsive.wp-post-image {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: auto;
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
 .home .thumbnail a img {
   position: relative;
   border: 1px solid #8c8c8c;
@@ -8551,7 +8572,8 @@ table > tfoot > tr > td {
   z-index: 9999;
 }
 @media (min-width: 992px) {
-  img.wp-post-image {
+  .blog img.wp-post-image,
+  .archive img.wp-post-image {
     float: left;
     margin: 0 30px 0 0;
     width: 33.33333333333333%;
@@ -8559,7 +8581,7 @@ table > tfoot > tr > td {
   }
 }
 @media (min-width: 992px) {
-  .post:first-of-type img.wp-post-image {
+  .blog .post:first-of-type img.wp-post-image {
     float: none;
     margin: 0;
     width: 100%;
