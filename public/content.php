@@ -7,7 +7,7 @@
 		<?php if ( is_single() ) { ?>	
 			<div class="metadata"><?php likethebootstrap_entry_meta(); ?></div>	
 		<?php } ?>		
-		<?php if ( is_home() ) { ?>	
+		<?php if ( is_home() || is_archive() ) { ?>	
 			<?php the_excerpt(); ?>
 		<?php } else { ?>		
 			<?php the_content(); ?>
