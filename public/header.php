@@ -4,7 +4,7 @@
 		<link href='https://fonts.googleapis.com/css?family=Catamaran:700,400,100' rel='stylesheet' type='text/css'>
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<title><?php wp_title(); ?></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="<?php bloginfo('stylesheet_directory');?>/style.min.css" rel="stylesheet">
 
@@ -57,11 +57,9 @@
 			?>
     </div>
 	</nav>
-
-	<?php if ( has_post_thumbnail() && is_page() ) { ?>
-		<div class="cover"> 
-			<figure><?php the_post_thumbnail('full', array( 'class' => 'img-responsive' ) ); ?></figure> 
-		</div>
-	<?php } ?>	
-
-  <div class="container">
+<?php if ( has_post_thumbnail() && is_page() ) { ?>
+	<div class="cover"> 
+		<figure><?php the_post_thumbnail('full', array( 'class' => 'img-responsive' ) ); ?></figure> 
+  </div>
+<?php } ?>	
+  <div class="container <?php if ( !has_post_thumbnail() && is_page() ) { ?>no-cover<?php } ?>">
