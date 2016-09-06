@@ -45,10 +45,10 @@ add_action('after_setup_theme', 'likethebootstrap_theme_support');
 /* Return entry meta information for posts, used by multiple loops. */ 
 if(!function_exists('likethebootstrap_entry_meta')) :
 	function likethebootstrap_entry_meta() {
-		printf('<span class="glyphicon glyphicon-user"></span> ');
-		echo '<span class="byline author">'. ' <a href="'. get_author_posts_url(get_the_author_meta('ID')) .'" rel="author">'. get_the_author() .'</a></span><br />';
-		printf('<span class="glyphicon glyphicon-calendar"></span> ');
-		echo '<time class="updated" datetime="'. get_the_time('c') .'" pubdate>'. get_the_time('F jS, Y') .'</time>';
+		printf('<i class="fa fa-user" aria-hidden="true"></i>');
+		echo '<span class="byline">'. ' <a href="'. get_author_posts_url(get_the_author_meta('ID')) .'" rel="author">'. get_the_author() .'</a></span>';
+		printf('<i class="fa fa-calendar" aria-hidden="true"></i>');
+		echo '<span class="updated" datetime="'. get_the_time('c') .'"><a href="'. get_permalink() . '">' . get_the_time('F jS, Y') .'</a></span>';
 	}
 endif;
 
@@ -76,7 +76,7 @@ foreach ($sidebars as $sidebar) {
     ));
 }
 
-// Add space for admin menu when user is logged in
+// Add space to display admin menu when user is logged in
 function my_admin_css() {
 	if ( is_user_logged_in() ) {
 	?>
@@ -99,5 +99,12 @@ function custom_excerpt_length( $length ) {
 	return 20;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+// Change excerpt more string and make a post permalink
+function new_excerpt_more( $more ) {
+  global $post;
+  return '&nbsp;&nbsp;&nbsp;<a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('Continue&nbsp;reading', 'likethebootstrap') . '&rarr;</a>';
+}
+add_filter( 'excerpt_more', 'new_excerpt_more' );
 
 ?>
