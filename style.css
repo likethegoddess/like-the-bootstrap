@@ -6557,6 +6557,9 @@ button.close {
   height: auto;
   margin-bottom: 12px;
 }
+h1.entry-title {
+  margin-top: 0;
+}
 .blog .post h1.entry-title {
   font-size: 28.5px;
 }
