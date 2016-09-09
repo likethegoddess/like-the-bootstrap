@@ -1,0 +1,44 @@
+// Wrapper and base class
+//
+// Provide a static navbar from which we expand to create full-width, fixed, and
+// other navbar variations.
+
+.navbar {
+  margin-bottom: 0;
+}
+// Float primary navbar left
+#primary-navbar-collapse {
+  @media (min-width: @grid-float-breakpoint) {
+		float: left; 
+		width: auto; 
+	}
+}
+// Float secondary navbar right
+#secondary-navbar-collapse {
+  @media (min-width: @grid-float-breakpoint) {
+		float: right; 
+		width: auto; 
+	}
+}
+
+//== Navs
+//
+//##
+
+//=== Shared nav styles for footer 
+footer #utility-navbar-collapse { 
+	padding-bottom: @line-height-computed; 
+} 
+footer .navbar-nav {
+	float:none;
+	margin: 0 auto;
+	display: table;
+}
+footer .navbar-nav > li > a { 
+	padding: (@line-height-computed / 2);  
+}
+footer .navbar-nav > li > a:hover, 
+footer .navbar-nav > li > a:focus { 
+	text-decoration: underline; 
+	background-color: transparent; 
+}

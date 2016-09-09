@@ -1,0 +1,21 @@
+//
+// Scaffolding
+// --------------------------------------------------
+
+.container > .row {
+	padding: (@line-height-computed *5) 0; 
+}
+.page .container > .row {
+	padding: (@line-height-computed *3) 0 (@line-height-computed *5); 
+}
+.page .container.no-cover > .row { 
+	padding: ((@line-height-computed *3) + @navbar-height) 0 (@line-height-computed *5); 
+}
+
+.post {
+	overflow: hidden; 
+}
+.blog .post:first-of-type {
+	height: auto; 
+	margin-bottom: (@line-height-computed /2)
+}
