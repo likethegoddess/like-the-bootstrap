@@ -1,14 +1,11 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="page-header">
-		<h1 class="entry-title"><?php _e( 'Nothing Found', 'the-bootstrap' ); ?></h1>
-	</header><!-- .entry-header -->
-
 	<div class="entry-content">
+		<h1 class="entry-title"><?php _e( 'Nothing Found', 'likethebootstrap' ); ?></h1>
 		<?php if ( is_search() ): ?>
-		<p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with different keyword.', 'ltgbootstrap' ); ?></p>
+		<p><?php _e( 'Sorry, nothing matched your search. Please search again with different criteria.', 'likethebootstrap' ); ?></p>
 		<?php get_search_form();
 		else: ?>
-		<p><?php _e( 'Apologies, but no results were found. Perhaps searching will help find a related post.', 'ltgbootstrap' ); ?></p>
+		<p><?php _e( 'Apologies, no results were found. Perhaps searching will help find a related post.', 'likethebootstrap' ); ?></p>
 		<?php get_search_form();
 		endif;?>
 	</div><!-- .entry-content -->

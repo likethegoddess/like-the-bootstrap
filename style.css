@@ -4,7 +4,7 @@ Theme URI: http://likethebootstrap.com
 Description: A responsive theme built with Bootstrap and Less
 Author: Diana Thompson
 Author URI: http://likethegoddess.com
-Version: 1.1.0
+Version: 1.1.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Tags: bootstrap, responsive-layout, grid-layout, one-column, two-columns, right-sidebar, featured-images, footer-widgets, full-width-template, post-formats, blog
@@ -6552,22 +6552,26 @@ button.close {
 }
 .post {
   overflow: hidden;
+  margin-bottom: 24px;
 }
 .blog .post:first-of-type {
   height: auto;
   margin-bottom: 12px;
 }
+h1.page-title,
 h1.entry-title {
   margin-top: 0;
 }
-.blog .post h1.entry-title {
+h1.entry-title {
   font-size: 28.5px;
 }
-@media (min-width: 1200px) {
-  .blog .post:first-of-type h1.entry-title {
-    font-size: 47.5px;
-  }
-}
+/* .blog .post:first-of-type h1 {
+	&.entry-title {
+		@media (min-width: @screen-lg-min) {
+			font-size: (@font-size-h1 * 1.25)
+		}
+	}
+} */
 .archive .post h1.entry-title {
   font-size: 23.75px;
 }
@@ -6786,6 +6790,29 @@ table > tfoot > tr > td {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+@media (min-width: 992px) {
+  .blog img.wp-post-image,
+  .archive img.wp-post-image {
+    float: left;
+    margin: 0 24px 0 0;
+    width: 33.33333333333333%;
+    clear: both;
+  }
+}
+.blog .post:first-of-type {
+  margin: 0 0 48px;
+}
+@media (min-width: 992px) {
+  .blog .post:first-of-type img.wp-post-image {
+    float: none;
+    margin: 0 0 24px;
+    width: 100%;
+    clear: both;
+  }
+}
+.single img.wp-post-image {
+  margin-bottom: 24px;
+}
 .home .thumbnail a img {
   position: relative;
   border: 1px solid #8c8c8c;
@@ -6796,21 +6823,4 @@ table > tfoot > tr > td {
 .image-meta {
   color: #999;
   z-index: 9999;
-}
-@media (min-width: 992px) {
-  .blog img.wp-post-image,
-  .archive img.wp-post-image {
-    float: left;
-    margin: 0 30px 0 0;
-    width: 33.33333333333333%;
-    clear: both;
-  }
-}
-@media (min-width: 992px) {
-  .blog .post:first-of-type img.wp-post-image {
-    float: none;
-    margin: 0;
-    width: 100%;
-    clear: both;
-  }
 }

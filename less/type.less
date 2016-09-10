@@ -5,23 +5,21 @@
 // Headings
 // -------------------------
 
-h1 {
-	&.entry-title {
-		margin-top: 0;
-	}
+
+h1.page-title, 
+h1.entry-title {
+	margin-top: 0; 
 }
-.blog .post h1 {
-	&.entry-title {
-		font-size: (@font-size-h1 * .75);
-	}
+h1.entry-title {
+	font-size: (@font-size-h1 * .75);
 }
-.blog .post:first-of-type h1 {
+/* .blog .post:first-of-type h1 {
 	&.entry-title {
 		@media (min-width: @screen-lg-min) {
 			font-size: (@font-size-h1 * 1.25)
 		}
 	}
-}
+} */ 
 .archive .post h1 {
 	&.entry-title {
 		font-size: (@font-size-h1 * .625);
