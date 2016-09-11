@@ -4,7 +4,7 @@ Like the Bootstrap v1.1.1 readme.md
 
 Theme Name: Like the Bootstrap<br>
 Theme URI: http://likethebootstrap.com<br>
-Description: A responsive theme built with Bootstrap and Less<br>
+Description: A responsive theme built with Bootstrap and LESS<br>
 Author: Diana Thompson<br>
 Author URI: http://likethegoddess.com<br>
 Version: 1.1.1<br>
