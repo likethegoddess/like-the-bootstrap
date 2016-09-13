@@ -4,7 +4,7 @@ Like the Bootstrap v1.1.1 readme.md
 
 Theme Name: Like the Bootstrap<br>
 Theme URI: http://likethebootstrap.com<br>
-Description: A responsive theme built with Bootstrap and LESS<br>
+Description: A responsive theme built with Bootstrap and Less<br>
 Author: Diana Thompson<br>
 Author URI: http://likethegoddess.com<br>
 Version: 1.1.1<br>
@@ -27,11 +27,16 @@ If you're making changes to the theme, simply extract the files on your computer
 
 ## Changelog 
 
-### v1.1.1 Changelog
+### v1.1.2 
+Fix: Change cover image formatting to flex-box 
+Tweak: Remove space on page header
+Tweak: Increase space after first blog post 
+
+### v1.1.1 
 Fixes: rework page/entry title spacing with and without featured images<br>
 New: separate content templates for post and pages<br>
 
-### v1.1.0 Changelog
+### v1.1.0 
 New: Added .gitignore<br>
 New: Added archive template<br>
 Fix: Added metadata to single template<br>
