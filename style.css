@@ -4,7 +4,7 @@ Theme URI: http://likethebootstrap.com
 Description: A responsive theme built with Bootstrap and Less
 Author: Diana Thompson
 Author URI: http://likethegoddess.com
-Version: 1.1.1
+Version: 1.1.2
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Tags: bootstrap, responsive-layout, grid-layout, one-column, two-columns, right-sidebar, featured-images, footer-widgets, full-width-template, post-formats, blog
@@ -6552,7 +6552,6 @@ button.close {
 }
 .post {
   overflow: hidden;
-  margin-bottom: 24px;
 }
 .blog .post:first-of-type {
   height: auto;
@@ -6602,7 +6601,7 @@ h2 .entry-title,
   }
 }
 .page-header {
-  margin: 12px 0 24px;
+  margin: 0;
   border-bottom: none;
 }
 ul,
@@ -6770,6 +6769,16 @@ table > tfoot > tr > td {
   }
 }
 .page .cover {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  -webkit-flex-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
   position: relative;
   width: 100%;
   height: 300px;
@@ -6779,16 +6788,6 @@ table > tfoot > tr > td {
   .page .cover {
     height: 400px;
   }
-}
-.page .cover img.img-responsive.wp-post-image {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  height: auto;
-  width: 100%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
 }
 @media (min-width: 992px) {
   .blog img.wp-post-image,
@@ -6800,7 +6799,7 @@ table > tfoot > tr > td {
   }
 }
 .blog .post:first-of-type {
-  margin: 0 0 48px;
+  margin: 0 0 24px;
 }
 @media (min-width: 992px) {
   .blog .post:first-of-type img.wp-post-image {

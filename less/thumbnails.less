@@ -4,6 +4,16 @@
 
 // Page featured image
 .page .cover {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	justify-content:center;
+	-webkit-flex-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
 	position: relative; 
 	width: 100%; 
 	height: 300px; 
@@ -11,16 +21,6 @@
 	@media (min-width: @screen-md-min) {
 		height: 400px; 	
 	}
-}
-.page .cover img.img-responsive.wp-post-image {	
- 	position: absolute; 
-  left: 50%;
-  top: 50%; 
-  height: auto;
-  width: 100%;
-  -webkit-transform: translate(-50%,-50%);
-      -ms-transform: translate(-50%,-50%);
-          transform: translate(-50%,-50%);
 }
 	
 // Post featured images 
