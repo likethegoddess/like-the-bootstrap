@@ -1,19 +1,7 @@
-Like the Bootstrap v1.1.1 readme.md
-
 # likethebootstrap
 
-Theme Name: Like the Bootstrap<br>
-Theme URI: http://likethebootstrap.com<br>
-Description: A responsive theme built with Bootstrap and Less<br>
-Author: Diana Thompson<br>
-Author URI: http://likethegoddess.com<br>
-Version: 1.1.2<br>
-License: GPLv3 or later<br>
-License URI: http://www.gnu.org/licenses/gpl-3.0.html<br>
-Tags: responsive, bootstrap, one-column, two-columns, right-sidebar, blog, featured-images, post-formats
-
 ## Description
-Like the Bootstrap is a responsive WordPress theme based on Bootstrap. It is designed to act both as a simple stand-alone theme and as a base theme for further development. 
+likethebootstrap is a responsive WordPress theme based on Bootstrap and Less. It is designed to act both as a simple stand-alone theme and as a base theme for further development. 
 
 ## Installation
 

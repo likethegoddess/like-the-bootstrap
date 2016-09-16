@@ -34,9 +34,9 @@ function likethebootstrap_theme_support() {
 	/* Add menus support  */
 	add_theme_support('menus');
 	register_nav_menus(array(
-			'primary' => __('Primary Navigation', 'likethebootstrap'),
-			'secondary' => __('Secondary Navigation', 'likethebootstrap'),
-			'utility' => __('Utility Navigation', 'likethebootstrap')
+			'primary' => __('Primary Navigation', 'like-the-bootstrap'),
+			'secondary' => __('Secondary Navigation', 'like-the-bootstrap'),
+			'utility' => __('Utility Navigation', 'like-the-bootstrap')
 	));
 	
 }
@@ -56,7 +56,7 @@ endif;
 $sidebars = array('Sidebar');
 foreach ($sidebars as $sidebar) {
     register_sidebar(array('name'=> $sidebar,
-				'name' => __( 'Sidebar', 'likethebootstrap' ),
+				'name' => __( 'Sidebar', 'like-the-bootstrap' ),
 				'id' => 'sidebar',
         'before_widget' => '<article id="%1$s" class="panel widget %2$s">',
         'after_widget' => '</article>',
@@ -67,7 +67,7 @@ foreach ($sidebars as $sidebar) {
 $sidebars = array('Footer');
 foreach ($sidebars as $sidebar) {
     register_sidebar(array('name'=> $sidebar,
-				'name' => __( 'Footer', 'likethebootstrap' ),
+				'name' => __( 'Footer', 'like-the-bootstrap' ),
 				'id' => 'footer',
         'before_widget' => '<div class="col-sm-12 col-md-3"><article id="%1$s" class="panel widget %2$s">',
         'after_widget' => '</article></div>',
@@ -103,7 +103,7 @@ add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 // Change excerpt more string and make a post permalink
 function new_excerpt_more( $more ) {
   global $post;
-  return '&nbsp;&nbsp;&nbsp;<a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('Continue&nbsp;reading', 'likethebootstrap') . '&rarr;</a>';
+  return '&nbsp;&nbsp;&nbsp;<a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('Continue&nbsp;reading', 'like-the-bootstrap') . '&rarr;</a>';
 }
 add_filter( 'excerpt_more', 'new_excerpt_more' );
 
