@@ -53,28 +53,31 @@ if(!function_exists('likethebootstrap_entry_meta')) :
 endif;
 
 /* Register sidebars */
-$sidebars = array('Sidebar');
-foreach ($sidebars as $sidebar) {
-    register_sidebar(array('name'=> $sidebar,
-				'name' => __( 'Sidebar', 'like-the-bootstrap' ),
-				'id' => 'sidebar',
+function like_the_bootstrap_sidebar_widgets_init() {
+    register_sidebar( array(
+        'name'          => __( 'Sidebar', 'like-the-bootstrap' ),
+        'id'            => 'sidebar',
+        'description'   => __( 'Widgets in this area will be shown on all posts and pages.', 'like-the-bootstrap' ),
         'before_widget' => '<article id="%1$s" class="panel widget %2$s">',
-        'after_widget' => '</article>',
-        'before_title' => '<h4>',
-        'after_title' => '</h4>'
-    ));
+        'after_widget'  => '</article>',
+        'before_title'  => '<h4 class="widgettitle">',
+        'after_title'   => '</h4>',
+    ) );
 }
-$sidebars = array('Footer');
-foreach ($sidebars as $sidebar) {
-    register_sidebar(array('name'=> $sidebar,
-				'name' => __( 'Footer', 'like-the-bootstrap' ),
-				'id' => 'footer',
+add_action( 'widgets_init', 'like_the_bootstrap_sidebar_widgets_init' );
+
+function like_the_bootstrap_footer_widgets_init() {
+    register_sidebar( array(
+        'name'          => __( 'Footer', 'like-the-bootstrap' ),
+        'id'            => 'footer',
+        'description'   => __( 'Widgets in this area will be shown on all posts and pages.', 'like-the-bootstrap' ),
         'before_widget' => '<div class="col-sm-12 col-md-3"><article id="%1$s" class="panel widget %2$s">',
-        'after_widget' => '</article></div>',
-        'before_title' => '<h4>',
-        'after_title' => '</h4>'
-    ));
+        'after_widget'  => '</article></div>',
+        'before_title'  => '<h4 class="widgettitle">',
+        'after_title'   => '</h4>',
+    ) );
 }
+add_action( 'widgets_init', 'like_the_bootstrap_footer_widgets_init' );
 
 // Add space to display admin menu when user is logged in
 function my_admin_css() {
