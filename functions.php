@@ -34,9 +34,9 @@ function likethebootstrap_theme_support() {
 	/* Add menus support  */
 	add_theme_support('menus');
 	register_nav_menus(array(
-			'primary' => __('Primary Navigation', 'likethebootstrap'),
-			'secondary' => __('Secondary Navigation', 'likethebootstrap'),
-			'utility' => __('Utility Navigation', 'likethebootstrap')
+			'primary' => __('Primary Navigation', 'like-the-bootstrap'),
+			'secondary' => __('Secondary Navigation', 'like-the-bootstrap'),
+			'utility' => __('Utility Navigation', 'like-the-bootstrap')
 	));
 	
 }
@@ -53,28 +53,31 @@ if(!function_exists('likethebootstrap_entry_meta')) :
 endif;
 
 /* Register sidebars */
-$sidebars = array('Sidebar');
-foreach ($sidebars as $sidebar) {
-    register_sidebar(array('name'=> $sidebar,
-				'name' => __( 'Sidebar', 'likethebootstrap' ),
-				'id' => 'sidebar',
+function like_the_bootstrap_sidebar_widgets_init() {
+    register_sidebar( array(
+        'name'          => __( 'Sidebar', 'like-the-bootstrap' ),
+        'id'            => 'sidebar',
+        'description'   => __( 'Widgets in this area will be shown on all posts and pages.', 'like-the-bootstrap' ),
         'before_widget' => '<article id="%1$s" class="panel widget %2$s">',
-        'after_widget' => '</article>',
-        'before_title' => '<h4>',
-        'after_title' => '</h4>'
-    ));
+        'after_widget'  => '</article>',
+        'before_title'  => '<h4 class="widgettitle">',
+        'after_title'   => '</h4>',
+    ) );
 }
-$sidebars = array('Footer');
-foreach ($sidebars as $sidebar) {
-    register_sidebar(array('name'=> $sidebar,
-				'name' => __( 'Footer', 'likethebootstrap' ),
-				'id' => 'footer',
+add_action( 'widgets_init', 'like_the_bootstrap_sidebar_widgets_init' );
+
+function like_the_bootstrap_footer_widgets_init() {
+    register_sidebar( array(
+        'name'          => __( 'Footer', 'like-the-bootstrap' ),
+        'id'            => 'footer',
+        'description'   => __( 'Widgets in this area will be shown on all posts and pages.', 'like-the-bootstrap' ),
         'before_widget' => '<div class="col-sm-12 col-md-3"><article id="%1$s" class="panel widget %2$s">',
-        'after_widget' => '</article></div>',
-        'before_title' => '<h4>',
-        'after_title' => '</h4>'
-    ));
+        'after_widget'  => '</article></div>',
+        'before_title'  => '<h4 class="widgettitle">',
+        'after_title'   => '</h4>',
+    ) );
 }
+add_action( 'widgets_init', 'like_the_bootstrap_footer_widgets_init' );
 
 // Add space to display admin menu when user is logged in
 function my_admin_css() {
@@ -103,7 +106,7 @@ add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 // Change excerpt more string and make a post permalink
 function new_excerpt_more( $more ) {
   global $post;
-  return '&nbsp;&nbsp;&nbsp;<a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('Continue&nbsp;reading', 'likethebootstrap') . '&rarr;</a>';
+  return '&nbsp;&nbsp;&nbsp;<a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('Continue&nbsp;reading', 'like-the-bootstrap') . '&rarr;</a>';
 }
 add_filter( 'excerpt_more', 'new_excerpt_more' );
 
