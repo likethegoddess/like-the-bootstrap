@@ -131,13 +131,30 @@ blockquote {
 	}
 }
 // Blog
-.metadata {
-	margin-bottom: (@line-height-computed * 2);
+p.metadata {
+	font-size: (@font-size-base * .875); 
+	margin-bottom: @line-height-computed;
+	&.category {
+		margin: @line-height-computed 0 0;
+	}
 }
-
 .byline {
-	margin-right: (@line-height-computed * .75); 
+	margin-right: (@line-height-computed * .625); 
 }
-.fa-calendar {
-	padding-right: (@line-height-computed * .2); 
+.updated {
+	margin-right: (@line-height-computed * .5); 
+}
+.category {
+	margin-right: (@line-height-computed * .4375); 
+}
+.fa {
+	display: inline; 
+}
+.fa-user {
+	margin-right: (@line-height-computed * .125); 
+}
+.fa-calendar,
+.fa-folder,
+.fa-tag {
+	margin-right: (@line-height-computed * .25); 
 }

@@ -6552,6 +6552,7 @@ button.close {
   padding: 122px 0 120px;
 }
 .post {
+  margin-bottom: 24px;
   overflow: hidden;
 }
 .blog .post:first-of-type {
@@ -6663,14 +6664,32 @@ blockquote {
     margin-right: 0;
   }
 }
-.metadata {
-  margin-bottom: 48px;
+p.metadata {
+  font-size: 13.125px;
+  margin-bottom: 24px;
+}
+p.metadata.category {
+  margin: 24px 0 0;
 }
 .byline {
-  margin-right: 18px;
+  margin-right: 15px;
 }
-.fa-calendar {
-  padding-right: 4.8px;
+.updated {
+  margin-right: 12px;
+}
+.category {
+  margin-right: 10.5px;
+}
+.fa {
+  display: inline;
+}
+.fa-user {
+  margin-right: 3px;
+}
+.fa-calendar,
+.fa-folder,
+.fa-tag {
+  margin-right: 6px;
 }
 button.search-submit,
 input.button {
