@@ -1,11 +1,11 @@
-# likethebootstrap
+# Like the Bootstrap
 
 ## Description
-likethebootstrap is a responsive WordPress theme based on Bootstrap and Less. It is designed to act both as a simple stand-alone theme and as a base theme for further development. 
+Like the Bootstrap is a responsive WordPress theme based on Bootstrap and Less. It is designed to act both as a simple stand-alone theme and as a base theme for further development. 
 
 ## Installation
 
-1. On https://github.com/likethegoddess/likethebootstrap, click the Clone or download button, then Download ZIP, and save to your computer.<br>
+1. On https://github.com/likethegoddess/like-the-bootstrap, click the Clone or download button, then Download ZIP, and save to your computer.<br>
 2. In the adminstration panels of your website, go to Appearance -> Themes and click the 'Add New' button.<br>
 3. On the Add Themes panel, click Upload Theme.<br>
 4. In the .zip format section, click Browse... and navigate to the folder where your bootrap, upload the .zip, and click the Install Now button. 
