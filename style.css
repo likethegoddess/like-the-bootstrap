@@ -6641,19 +6641,6 @@ blockquote {
   margin: 24px 0;
   background-color: #eeeeee;
 }
-@media (min-width: 768px) {
-  blockquote {
-    width: 41.66666666666667%;
-    float: right;
-    margin-left: 24px;
-  }
-}
-@media (min-width: 1200px) {
-  .page-template-page-full .entry-content blockquote {
-    margin-left: 8.33333333333333%;
-    margin-right: 8.33333333333333%;
-  }
-}
 .page-template-page-full .entry-content blockquote p {
   text-indent: -0.325em;
 }
