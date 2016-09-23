@@ -16,15 +16,15 @@ If you're making changes to the theme, simply extract the files on your computer
 ## Changelog 
 
 ### v1.1.3: 
-Fix: Review text domain and change as needed 
-Fix: Remove deprecated theme tags
-Fix: Register sidebars with widget_init
-New: Add categories and tags to single page, create separate content template for single template 
+Fix: Review text domain and change as needed<br> 
+Fix: Remove deprecated theme tags<br>
+Fix: Register sidebars with widget_init<br>
+New: Add categories and tags to single page, create separate content template for single template<br> 
 
 ### v1.1.2 
-Fix: Change cover image formatting to flex-box 
-Tweak: Remove space on page header
-Tweak: Increase space after first blog post 
+Fix: Change cover image formatting to flex-box<br> 
+Tweak: Remove space on page header<br>
+Tweak: Increase space after first blog post<br> 
 
 ### v1.1.1 
 Fixes: rework page/entry title spacing with and without featured images<br>
@@ -44,7 +44,7 @@ Tweak: Changed navbar class margin<br>
 Tweak: Adjusted page container padding<br>
 Tweak: Added dropdowns.less to style.less<br>
 Tweak: Changed page-header class formatting<br>
-Tweak: Added "Continue reading..." link to automatically generated excerpts<br>  
+Tweak: Added "Continue reading..." link to automatically generated excerpts<br>
 Tweak: Added space after header on pages when no thumbnail is displayed<br>
 Tweak: Added new screenshot<br>
 Tweak: Update style.less/css and readme.md<br>
