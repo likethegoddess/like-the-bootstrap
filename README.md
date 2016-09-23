@@ -15,6 +15,12 @@ If you're making changes to the theme, simply extract the files on your computer
 
 ## Changelog 
 
+### v1.1.3: 
+Fix: Review text domain and change as needed 
+Fix: Remove deprecated theme tags
+Fix: Register sidebars with widget_init
+New: Add categories and tags to single page, create separate content template for single template 
+
 ### v1.1.2 
 Fix: Change cover image formatting to flex-box 
 Tweak: Remove space on page header
