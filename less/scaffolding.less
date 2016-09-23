@@ -20,3 +20,22 @@
 	height: auto; 
 	margin-bottom: (@line-height-computed *2)
 }
+
+.alignleft {
+	@media (min-width: @screen-md-min) {
+		display: inline; 
+		float: left; 
+		margin: (@line-height-computed * .25) @grid-gutter-width (@line-height-computed * .75) 0; 
+	}
+}
+.alignright {
+	@media (min-width: @screen-md-min) {
+		display: inline; 
+		float: right; 
+		margin: (@line-height-computed * .25)  0 (@line-height-computed * .75) @grid-gutter-width; 
+	}
+}
+.aligncenter {
+	display: block; 
+	margin: @line-height-computed auto; 
+}
