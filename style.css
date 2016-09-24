@@ -6555,9 +6555,8 @@ button.close {
   margin-bottom: 24px;
   overflow: hidden;
 }
-.blog .post:first-of-type {
+.blog .sticky {
   height: auto;
-  margin-bottom: 48px;
 }
 @media (min-width: 992px) {
   .alignleft {
@@ -6584,7 +6583,7 @@ h1.entry-title {
 h1.entry-title {
   font-size: 28.5px;
 }
-/* .blog .post:first-of-type h1 {
+/* .blog .sticky h1 {
 	&.entry-title {
 		@media (min-width: @screen-lg-min) {
 			font-size: (@font-size-h1 * 1.25)
@@ -6831,11 +6830,11 @@ table > tfoot > tr > td {
     clear: both;
   }
 }
-.blog .post:first-of-type {
+.sticky {
   margin: 0 0 24px;
 }
 @media (min-width: 992px) {
-  .blog .post:first-of-type img.wp-post-image {
+  .blog .sticky img.wp-post-image {
     float: none;
     margin: 0 0 24px;
     width: 100%;
