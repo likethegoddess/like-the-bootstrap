@@ -5,7 +5,7 @@
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="profile" href="http://gmpg.org/xfn/11">
-    <link href="<?php bloginfo('stylesheet_directory');?>/style.min.css" rel="stylesheet">
+    <link href="<?php echo esc_url( get_stylesheet_directory_uri() );?>/style.min.css" rel="stylesheet">
 
     <!-- HTML5 shim, adds IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
