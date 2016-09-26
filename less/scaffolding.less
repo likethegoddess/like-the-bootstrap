@@ -3,13 +3,13 @@
 // --------------------------------------------------
 
 .container > .row {
-	padding: (@line-height-computed *5) 0; 
+	padding: (@padding-base-vertical *20) 0; 
 }
 .page .container > .row {
-	padding: (@line-height-computed *3) 0 (@line-height-computed *5); 
+	padding: (@padding-base-vertical *12) 0 (@padding-base-vertical *20); 
 }
 .page .container.no-cover > .row { 
-	padding: ((@line-height-computed *3) + @navbar-height) 0 (@line-height-computed *5); 
+	padding: ((@padding-base-vertical *12) + @navbar-height) 0 (@padding-base-vertical *20); 
 }
 
 .post {
@@ -24,14 +24,14 @@
 	@media (min-width: @screen-md-min) {
 		display: inline; 
 		float: left; 
-		margin: (@line-height-computed * .25) @grid-gutter-width (@line-height-computed * .75) 0; 
+		margin: (@line-height-computed / 2) @grid-gutter-width @line-height-computed 0; 
 	}
 }
 .alignright {
 	@media (min-width: @screen-md-min) {
 		display: inline; 
 		float: right; 
-		margin: (@line-height-computed * .25)  0 (@line-height-computed * .75) @grid-gutter-width; 
+		margin: (@line-height-computed / 2) 0 @line-height-computed @grid-gutter-width; 
 	}
 }
 .aligncenter {

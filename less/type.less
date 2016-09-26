@@ -30,8 +30,12 @@ h2, .h2 {
 		font-size: @font-size-h2-small;
 	}
 	.entry-title {
-		margin-bottom: @line-height-computed;
+		margin-bottom: (@line-height-computed / 2);
 	}
+}
+h4.widgettitle {
+	margin-top: 0; 
+	margin-bottom: (@line-height-computed / 4);
 }
 
 // Body text
@@ -108,7 +112,7 @@ abbr[title] {
 
 // Blockquotes
 blockquote {
-  margin: @line-height-computed 0;
+  margin: (@line-height-computed / 2) 0;
 	background-color: @gray-lighter; 
 }
 .page-template-page-full .entry-content blockquote p {
@@ -122,9 +126,9 @@ blockquote {
 // Metadata
 p.metadata {
 	font-size: (@font-size-base * .875); 
-	margin-bottom: @line-height-computed;
+	margin-bottom: (@line-height-computed / 2);
 	&.category {
-		margin: @line-height-computed 0 0;
+		margin: (@line-height-computed / 2) 0 0;
 	}
 }
 .byline {

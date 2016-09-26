@@ -6562,14 +6562,14 @@ button.close {
   .alignleft {
     display: inline;
     float: left;
-    margin: 6px 30px 18px 0;
+    margin: 12px 30px 24px 0;
   }
 }
 @media (min-width: 992px) {
   .alignright {
     display: inline;
     float: right;
-    margin: 6px 0 18px 30px;
+    margin: 12px 0 24px 30px;
   }
 }
 .aligncenter {
@@ -6599,7 +6599,11 @@ h2 small,
 }
 h2 .entry-title,
 .h2 .entry-title {
-  margin-bottom: 24px;
+  margin-bottom: 12px;
+}
+h4.widgettitle {
+  margin-top: 0;
+  margin-bottom: 6px;
 }
 @media (min-width: 1200px) {
   .entry-content p {
@@ -6655,7 +6659,7 @@ abbr[title] {
   text-decoration: none !important;
 }
 blockquote {
-  margin: 24px 0;
+  margin: 12px 0;
   background-color: #eeeeee;
 }
 .page-template-page-full .entry-content blockquote p {
@@ -6670,10 +6674,10 @@ blockquote {
 }
 p.metadata {
   font-size: 13.125px;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
 }
 p.metadata.category {
-  margin: 24px 0 0;
+  margin: 12px 0 0;
 }
 .byline {
   margin-right: 15px;
@@ -6705,7 +6709,7 @@ p.gallery-caption {
 }
 button.search-submit,
 input.button {
-  padding: 2px 12px;
+  padding: 3px 9px;
   color: #595959;
   background-color: #eeeeee;
   border: 1px solid #595959;
@@ -6724,6 +6728,10 @@ input[type="checkbox"] {
   float: left;
   margin: 8px 12px 0 0;
   margin-top: 5px \9;
+}
+input[type="search"] {
+  border: 1px solid #222222;
+  padding: 3px;
 }
 .navbar {
   margin-bottom: 0;
@@ -6757,8 +6765,7 @@ footer .navbar-nav > li > a:focus {
   background-color: transparent;
 }
 .panel {
-  box-shadow: none!important;
-  margin-bottom: 12px;
+  margin-bottom: 18px;
 }
 .widget ul {
   list-style: none;
@@ -6831,7 +6838,7 @@ table > tfoot > tr > td {
   }
 }
 .sticky {
-  margin: 0 0 24px;
+  margin: 0 0 12px;
 }
 @media (min-width: 992px) {
   .blog .sticky img.wp-post-image {
