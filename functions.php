@@ -14,6 +14,9 @@ add_action( 'wp_enqueue_scripts', 'likethebootstrap_scripts' );
 /* Add theme support */
 function likethebootstrap_theme_support() {
 	
+	/* Add post title tag support */
+	add_theme_support('title-tag');
+
 	/* Add post thumbnail support */
 	add_theme_support('post-thumbnails');
 	/* set_post_thumbnail_size(150, 150, false); */

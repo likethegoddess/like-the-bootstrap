@@ -3,20 +3,49 @@
 // --------------------------------------------------
 
 .container > .row {
-	padding: (@line-height-computed *5) 0; 
+	padding: (@padding-base-vertical * 20) 0 (@padding-base-vertical * 5); 
+	@media (min-width: @screen-md-min) {
+		padding: (@padding-base-vertical * 20) 0 (@padding-base-vertical * 5) ; 
+	}
 }
-.page .container > .row {
-	padding: (@line-height-computed *3) 0 (@line-height-computed *5); 
+.page .container > .row { /* change spacing to accommodate cover images on pages */
+	padding: (@padding-base-vertical * 12) 0 0; 
+	@media (min-width: @screen-md-min) {
+		padding: (@padding-base-vertical * 12) 0 (@padding-base-vertical * 5); 
+	}
 }
-.page .container.no-cover > .row { 
-	padding: ((@line-height-computed *3) + @navbar-height) 0 (@line-height-computed *5); 
+.page .container.no-cover > .row { /* change spacing to accommodate main navbar when no cover images are placed on pages */ 
+	padding: ((@padding-base-vertical * 12) + @navbar-height) 0 0; 
+	@media (min-width: @screen-md-min) {
+		padding: ((@padding-base-vertical * 12) + @navbar-height) 0 (@padding-base-vertical * 5); 
+	}
 }
-
 .post {
 	margin-bottom: @line-height-computed; 
 	overflow: hidden; 
 }
-.blog .post:first-of-type {
+.blog .sticky {
 	height: auto; 
-	margin-bottom: (@line-height-computed *2)
+}
+.entry-content {
+	padding: 0 0 (@padding-base-vertical * 2); 	
+}
+
+.alignleft {
+	@media (min-width: @screen-md-min) {
+		display: inline; 
+		float: left; 
+		margin: (@line-height-computed / 2) @grid-gutter-width @line-height-computed 0; 
+	}
+}
+.alignright {
+	@media (min-width: @screen-md-min) {
+		display: inline; 
+		float: right; 
+		margin: (@line-height-computed / 2) 0 @line-height-computed @grid-gutter-width; 
+	}
+}
+.aligncenter {
+	display: block; 
+	margin: @line-height-computed auto; 
 }

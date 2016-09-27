@@ -5,7 +5,7 @@ Description: A responsive theme built with Bootstrap and Less
 Author: Diana Thompson
 Author URI: http://likethegoddess.com
 Text Domain: like-the-bootstrap
-Version: 1.1.3
+Version: 1.1.4
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Tags: grid-layout, one-column, two-columns, right-sidebar, featured-images, footer-widgets, full-width-template, post-formats, blog
@@ -6543,30 +6543,69 @@ button.close {
   }
 }
 .container > .row {
-  padding: 120px 0;
+  padding: 120px 0 30px;
+}
+@media (min-width: 992px) {
+  .container > .row {
+    padding: 120px 0 30px;
+  }
 }
 .page .container > .row {
-  padding: 72px 0 120px;
+  /* change spacing to accommodate cover images on pages */
+  padding: 72px 0 0;
+}
+@media (min-width: 992px) {
+  .page .container > .row {
+    padding: 72px 0 30px;
+  }
 }
 .page .container.no-cover > .row {
-  padding: 122px 0 120px;
+  /* change spacing to accommodate main navbar when no cover images are placed on pages */
+  padding: 122px 0 0;
+}
+@media (min-width: 992px) {
+  .page .container.no-cover > .row {
+    padding: 122px 0 30px;
+  }
 }
 .post {
   margin-bottom: 24px;
   overflow: hidden;
 }
-.blog .post:first-of-type {
+.blog .sticky {
   height: auto;
-  margin-bottom: 48px;
 }
-h1.page-title,
-h1.entry-title {
-  margin-top: 0;
+.entry-content {
+  padding: 0 0 12px;
+}
+@media (min-width: 992px) {
+  .alignleft {
+    display: inline;
+    float: left;
+    margin: 12px 30px 24px 0;
+  }
+}
+@media (min-width: 992px) {
+  .alignright {
+    display: inline;
+    float: right;
+    margin: 12px 0 24px 30px;
+  }
+}
+.aligncenter {
+  display: block;
+  margin: 24px auto;
+}
+@media (min-width: 992px) {
+  h1.page-title,
+  h1.entry-title {
+    margin-top: 0;
+  }
 }
 h1.entry-title {
   font-size: 28.5px;
 }
-/* .blog .post:first-of-type h1 {
+/* .blog .sticky h1 {
 	&.entry-title {
 		@media (min-width: @screen-lg-min) {
 			font-size: (@font-size-h1 * 1.25)
@@ -6582,7 +6621,11 @@ h2 small,
 }
 h2 .entry-title,
 .h2 .entry-title {
-  margin-bottom: 24px;
+  margin-bottom: 12px;
+}
+h4.widgettitle {
+  margin-top: 0;
+  margin-bottom: 6px;
 }
 @media (min-width: 1200px) {
   .entry-content p {
@@ -6638,21 +6681,8 @@ abbr[title] {
   text-decoration: none !important;
 }
 blockquote {
-  margin: 24px 0;
+  margin: 12px 0;
   background-color: #eeeeee;
-}
-@media (min-width: 768px) {
-  blockquote {
-    width: 41.66666666666667%;
-    float: right;
-    margin-left: 24px;
-  }
-}
-@media (min-width: 1200px) {
-  .page-template-page-full .entry-content blockquote {
-    margin-left: 8.33333333333333%;
-    margin-right: 8.33333333333333%;
-  }
 }
 .page-template-page-full .entry-content blockquote p {
   text-indent: -0.325em;
@@ -6666,10 +6696,10 @@ blockquote {
 }
 p.metadata {
   font-size: 13.125px;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
 }
 p.metadata.category {
-  margin: 24px 0 0;
+  margin: 12px 0 0;
 }
 .byline {
   margin-right: 15px;
@@ -6691,9 +6721,26 @@ p.metadata.category {
 .fa-tag {
   margin-right: 6px;
 }
+.wp-caption {
+  max-width: 100%;
+}
+p.wp-caption-text,
+p.gallery-caption {
+  font-size: 14.0625px;
+  margin-top: 6px;
+}
+.next-previous-navigation {
+  margin: 24px 0 72px;
+}
+.previous {
+  float: left;
+}
+.next {
+  float: right;
+}
 button.search-submit,
 input.button {
-  padding: 2px 12px;
+  padding: 1px 12px;
   color: #595959;
   background-color: #eeeeee;
   border: 1px solid #595959;
@@ -6712,6 +6759,10 @@ input[type="checkbox"] {
   float: left;
   margin: 8px 12px 0 0;
   margin-top: 5px \9;
+}
+input[type="search"] {
+  border: 1px solid #222222;
+  padding: 1px 12px;
 }
 .navbar {
   margin-bottom: 0;
@@ -6745,8 +6796,9 @@ footer .navbar-nav > li > a:focus {
   background-color: transparent;
 }
 .panel {
-  box-shadow: none!important;
-  margin-bottom: 12px;
+  margin-bottom: 18px;
+  border-bottom: 0;
+  box-shadow: none;
 }
 .widget ul {
   list-style: none;
@@ -6818,11 +6870,11 @@ table > tfoot > tr > td {
     clear: both;
   }
 }
-.blog .post:first-of-type {
-  margin: 0 0 24px;
+.sticky {
+  margin: 0 0 12px;
 }
 @media (min-width: 992px) {
-  .blog .post:first-of-type img.wp-post-image {
+  .blog .sticky img.wp-post-image {
     float: none;
     margin: 0 0 24px;
     width: 100%;

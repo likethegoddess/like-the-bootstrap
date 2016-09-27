@@ -3,10 +3,9 @@
   <head>
 		<link href='https://fonts.googleapis.com/css?family=Catamaran:700,400,100' rel='stylesheet' type='text/css'>
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
-		<title><?php wp_title(); ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link href="<?php bloginfo('stylesheet_directory');?>/style.min.css" rel="stylesheet">
+		<link rel="profile" href="http://gmpg.org/xfn/11">
+    <link href="<?php echo esc_url( get_stylesheet_directory_uri() );?>/style.min.css" rel="stylesheet">
 
     <!-- HTML5 shim, adds IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
