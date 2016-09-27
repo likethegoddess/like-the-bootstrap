@@ -3,33 +3,32 @@
 // --------------------------------------------------
 
 .container > .row {
-	padding: (@padding-base-vertical * 20) 0 0; 
+	padding: (@padding-base-vertical * 20) 0 (@padding-base-vertical * 5); 
 	@media (min-width: @screen-md-min) {
-		padding: (@padding-base-vertical * 20) 0; 
+		padding: (@padding-base-vertical * 20) 0 (@padding-base-vertical * 5) ; 
 	}
 }
-.page .container > .row {
+.page .container > .row { /* change spacing to accommodate cover images on pages */
 	padding: (@padding-base-vertical * 12) 0 0; 
 	@media (min-width: @screen-md-min) {
-		padding: (@padding-base-vertical * 12) 0 (@padding-base-vertical * 20); 
+		padding: (@padding-base-vertical * 12) 0 (@padding-base-vertical * 5); 
 	}
 }
-.page .container.no-cover > .row { 
+.page .container.no-cover > .row { /* change spacing to accommodate main navbar when no cover images are placed on pages */ 
 	padding: ((@padding-base-vertical * 12) + @navbar-height) 0 0; 
 	@media (min-width: @screen-md-min) {
-		padding: ((@padding-base-vertical * 12) + @navbar-height) 0 (@padding-base-vertical * 20); 
+		padding: ((@padding-base-vertical * 12) + @navbar-height) 0 (@padding-base-vertical * 5); 
 	}
 }
-.entry-content {
-	padding: 0 0 (@padding-base-vertical *4); 	
-}
-
 .post {
 	margin-bottom: @line-height-computed; 
 	overflow: hidden; 
 }
 .blog .sticky {
 	height: auto; 
+}
+.entry-content {
+	padding: 0 0 (@padding-base-vertical * 2); 	
 }
 
 .alignleft {

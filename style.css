@@ -6566,15 +6566,18 @@ button.close {
     padding: 122px 0 120px;
   }
 }
-.entry-content {
-  padding: 0 0 24px;
-}
 .post {
   margin-bottom: 24px;
   overflow: hidden;
 }
 .blog .sticky {
   height: auto;
+}
+.entry-content {
+  padding: 0 0 12px;
+}
+footer .row {
+  margin: 24px 0;
 }
 @media (min-width: 992px) {
   .alignleft {
