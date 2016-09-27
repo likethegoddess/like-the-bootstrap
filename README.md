@@ -15,6 +15,19 @@ If you're making changes to the theme, simply extract the files on your computer
 
 ## Changelog 
 
+### v1.1.4:
+Tweak: Set blockquote to 100% width on all screen widths<br>
+Tweak: Add alignment styles .alignright, .alignleft, .aligncenter<br>
+Tweak: Add caption styles .wp-caption, .wp-caption-text, .gallery-caption<br> 
+Tweak: Convert first-of-type blog post styles to sticky class. <br>
+Tweak: Change to padding styles to @padding-base... <br>
+Tweak: Add styles for screen readers, remove panel border and box-shadow<br>
+Tweak: Change to title-tag support and add meta data profile<br>
+Tweak: Update stylesheet link <br>
+Tweak: Adjust search form button/padding remove search form screen reader class<br>
+Tweak: Spacing adjustments for mobile view<br>
+New: Next/previous navigation on index and single templates<br>
+
 ### v1.1.3: 
 Fix: Review text domain and change as needed<br> 
 Fix: Remove deprecated theme tags<br>
