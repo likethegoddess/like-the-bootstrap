@@ -6543,13 +6543,31 @@ button.close {
   }
 }
 .container > .row {
-  padding: 120px 0;
+  padding: 120px 0 0;
+}
+@media (min-width: 992px) {
+  .container > .row {
+    padding: 120px 0;
+  }
 }
 .page .container > .row {
-  padding: 72px 0 120px;
+  padding: 72px 0 0;
+}
+@media (min-width: 992px) {
+  .page .container > .row {
+    padding: 72px 0 120px;
+  }
 }
 .page .container.no-cover > .row {
-  padding: 122px 0 120px;
+  padding: 122px 0 0;
+}
+@media (min-width: 992px) {
+  .page .container.no-cover > .row {
+    padding: 122px 0 120px;
+  }
+}
+.entry-content {
+  padding: 0 0 24px;
 }
 .post {
   margin-bottom: 24px;
@@ -6576,9 +6594,11 @@ button.close {
   display: block;
   margin: 24px auto;
 }
-h1.page-title,
-h1.entry-title {
-  margin-top: 0;
+@media (min-width: 992px) {
+  h1.page-title,
+  h1.entry-title {
+    margin-top: 0;
+  }
 }
 h1.entry-title {
   font-size: 28.5px;
@@ -6707,37 +6727,9 @@ p.gallery-caption {
   font-size: 14.0625px;
   margin-top: 6px;
 }
-/* Text meant only for screen readers. */
-.screen-reader-text {
-  clip: rect(1px, 1px, 1px, 1px);
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-}
-.screen-reader-text:focus {
-  background-color: #f1f1f1;
-  border-radius: 3px;
-  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-  clip: auto !important;
-  color: #21759b;
-  display: block;
-  font-size: 14px;
-  font-size: 0.875rem;
-  font-weight: bold;
-  height: auto;
-  left: 5px;
-  line-height: normal;
-  padding: 15px 23px 14px;
-  text-decoration: none;
-  top: 5px;
-  width: auto;
-  z-index: 100000;
-  /* Above WP toolbar. */
-}
 button.search-submit,
 input.button {
-  padding: 3px 9px;
+  padding: 1px 12px;
   color: #595959;
   background-color: #eeeeee;
   border: 1px solid #595959;
@@ -6759,7 +6751,7 @@ input[type="checkbox"] {
 }
 input[type="search"] {
   border: 1px solid #222222;
-  padding: 3px;
+  padding: 1px 12px;
 }
 .navbar {
   margin-bottom: 0;

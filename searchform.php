@@ -8,5 +8,5 @@
 	<label>
 		<input type="search" class="search-field" value="<?php echo get_search_query(); ?>" name="s" />
 	</label>
-	<button type="submit" class="search-submit"><?php echo _x( 'Search', 'submit button', 'likethebootstrap' ); ?></button>
+	<button type="submit" class="search-submit"><?php echo _x( 'Search', 'submit button', 'like-the-bootstrap' ); ?></button>
 </form>

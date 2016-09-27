@@ -3,13 +3,25 @@
 // --------------------------------------------------
 
 .container > .row {
-	padding: (@padding-base-vertical *20) 0; 
+	padding: (@padding-base-vertical * 20) 0 0; 
+	@media (min-width: @screen-md-min) {
+		padding: (@padding-base-vertical * 20) 0; 
+	}
 }
 .page .container > .row {
-	padding: (@padding-base-vertical *12) 0 (@padding-base-vertical *20); 
+	padding: (@padding-base-vertical * 12) 0 0; 
+	@media (min-width: @screen-md-min) {
+		padding: (@padding-base-vertical * 12) 0 (@padding-base-vertical * 20); 
+	}
 }
 .page .container.no-cover > .row { 
-	padding: ((@padding-base-vertical *12) + @navbar-height) 0 (@padding-base-vertical *20); 
+	padding: ((@padding-base-vertical * 12) + @navbar-height) 0 0; 
+	@media (min-width: @screen-md-min) {
+		padding: ((@padding-base-vertical * 12) + @navbar-height) 0 (@padding-base-vertical * 20); 
+	}
+}
+.entry-content {
+	padding: 0 0 (@padding-base-vertical *4); 	
 }
 
 .post {
