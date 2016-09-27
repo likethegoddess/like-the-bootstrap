@@ -6729,6 +6729,15 @@ p.gallery-caption {
   font-size: 14.0625px;
   margin-top: 6px;
 }
+.next-previous-navigation {
+  margin: 24px 0 72px;
+}
+.previous {
+  float: left;
+}
+.next {
+  float: right;
+}
 button.search-submit,
 input.button {
   padding: 1px 12px;
