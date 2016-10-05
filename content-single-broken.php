@@ -14,14 +14,13 @@
 		<?php the_content(); ?>
 	</div><!--entry-content -->
 	
-	<?php if ( has_category() ) { ?>
-		<p class="metadata category"><i class="fa fa-folder" aria-hidden="true"></i><?php the_terms( $post->ID, 'category', '', ', ' ); ?></p>
-	<?php } ?> 
-	<?php if ( has_tag() ) { ?>
-		<p class="metadata tag"><i class="fa fa-tag" aria-hidden="true"></i><?php the_tags('', ', ', ''); ?></p>
-	<?php } ?>
-
 	<footer class="entry-footer">
+		<?php if ( has_category() ) { ?>
+			<p class="metadata category"><i class="fa fa-folder" aria-hidden="true"></i><?php the_terms( $post->ID, 'category', '', ', ' ); ?></p>
+		<?php } ?> 
+		<?php if ( has_tag() ) { ?>
+			<p class="metadata tag"><i class="fa fa-tag" aria-hidden="true"></i><?php the_tags('', ', ', ''); ?></p>
+		<?php } ?>
 		<div class="next-previous-navigation">
 			<span class="previous"><?php previous_post_link('&larr; %link'); ?></span>
 			<span class="next"><?php next_post_link('%link &rarr;'); ?></span>
@@ -37,4 +36,6 @@
 		?>
 	</footer><!-- .entry-footer -->
 
+	
+	</div><!-- .entry-content -->
 </article>
