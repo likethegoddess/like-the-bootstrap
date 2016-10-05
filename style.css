@@ -5,7 +5,7 @@ Description: A responsive theme built with Bootstrap and Less
 Author: Diana Thompson
 Author URI: http://likethegoddess.com
 Text Domain: like-the-bootstrap
-Version: 1.1.4
+Version: 1.1.5
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Tags: grid-layout, one-column, two-columns, right-sidebar, featured-images, footer-widgets, full-width-template, post-formats, blog
@@ -6572,8 +6572,9 @@ button.close {
   margin-bottom: 24px;
   overflow: hidden;
 }
-.blog .sticky {
+.sticky {
   height: auto;
+  margin: 0 0 12px;
 }
 .entry-content {
   padding: 0 0 12px;
@@ -6595,6 +6596,55 @@ button.close {
 .aligncenter {
   display: block;
   margin: 24px auto;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.page .cover {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  -webkit-flex-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+@media (min-width: 992px) {
+  .page .cover {
+    height: 400px;
+  }
+}
+@media (min-width: 992px) {
+  .blog img.wp-post-image,
+  .archive img.wp-post-image {
+    float: left;
+    margin: 0 24px 0 0;
+    width: 33.33333333333333%;
+    clear: both;
+  }
+}
+.sticky {
+  margin: 0 0 12px;
+}
+@media (min-width: 992px) {
+  .blog .sticky img.wp-post-image {
+    float: none;
+    margin: 0 0 24px;
+    width: 100%;
+    clear: both;
+  }
+}
+.single img.wp-post-image {
+  margin-bottom: 24px;
 }
 @media (min-width: 992px) {
   h1.page-title,
@@ -6738,17 +6788,19 @@ p.gallery-caption {
 .next {
   float: right;
 }
-button.search-submit,
-input.button {
-  padding: 1px 12px;
-  color: #595959;
-  background-color: #eeeeee;
-  border: 1px solid #595959;
+input.button,
+input[type=submit],
+button.search-submit {
+  padding: 1px 12px !important;
+  color: #595959 !important;
+  background-color: #eeeeee !important;
+  border: 1px solid #595959 !important;
 }
-button.search-submit:hover,
-input.button:hover {
-  color: #fff;
-  background-color: #222222;
+input.button:hover,
+input[type=submit]:hover,
+button.search-submit:hover {
+  color: #fff !important;
+  background-color: #222222 !important;
 }
 .dropdown-menu {
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.175);
@@ -6840,27 +6892,6 @@ table > tfoot > tr > td {
     display: block;
   }
 }
-.page .cover {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  justify-content: center;
-  -webkit-flex-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-  position: relative;
-  width: 100%;
-  height: 300px;
-  overflow: hidden;
-}
-@media (min-width: 992px) {
-  .page .cover {
-    height: 400px;
-  }
-}
 @media (min-width: 992px) {
   .blog img.wp-post-image,
   .archive img.wp-post-image {
@@ -6870,11 +6901,8 @@ table > tfoot > tr > td {
     clear: both;
   }
 }
-.sticky {
-  margin: 0 0 12px;
-}
 @media (min-width: 992px) {
-  .blog .sticky img.wp-post-image {
+  .sticky img.wp-post-image {
     float: none;
     margin: 0 0 24px;
     width: 100%;
