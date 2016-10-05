@@ -2,6 +2,27 @@
 // Thumbnails
 // --------------------------------------------------
 
+// Page featured image
+.page .cover {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	justify-content:center;
+	-webkit-flex-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+	position: relative; 
+	width: 100%; 
+	height: 300px; 
+	overflow: hidden; 
+	@media (min-width: @screen-md-min) {
+		height: 400px; 	
+	}
+}
+	
 // Post featured images 
 .blog img.wp-post-image,
 .archive img.wp-post-image {
@@ -12,7 +33,10 @@
 		clear: both; 
 	}
 }
-.sticky img.wp-post-image {
+.sticky {
+		margin: 0 0 (@line-height-computed / 2); 
+}
+.blog .sticky img.wp-post-image {
 	@media (min-width: @screen-md-min) {
 		float: none; 
 		margin: 0 0 @line-height-computed; 
