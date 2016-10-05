@@ -5,7 +5,7 @@ Description: A responsive theme built with Bootstrap and Less
 Author: Diana Thompson
 Author URI: http://likethegoddess.com
 Text Domain: like-the-bootstrap
-Version: 1.1.4
+Version: 1.1.5
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Tags: grid-layout, one-column, two-columns, right-sidebar, featured-images, footer-widgets, full-width-template, post-formats, blog
@@ -6596,6 +6596,55 @@ button.close {
   display: block;
   margin: 24px auto;
 }
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.page .cover {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  -webkit-flex-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+@media (min-width: 992px) {
+  .page .cover {
+    height: 400px;
+  }
+}
+@media (min-width: 992px) {
+  .blog img.wp-post-image,
+  .archive img.wp-post-image {
+    float: left;
+    margin: 0 24px 0 0;
+    width: 33.33333333333333%;
+    clear: both;
+  }
+}
+.sticky {
+  margin: 0 0 12px;
+}
+@media (min-width: 992px) {
+  .blog .sticky img.wp-post-image {
+    float: none;
+    margin: 0 0 24px;
+    width: 100%;
+    clear: both;
+  }
+}
+.single img.wp-post-image {
+  margin-bottom: 24px;
+}
 @media (min-width: 992px) {
   h1.page-title,
   h1.entry-title {
@@ -6840,27 +6889,6 @@ table > tfoot > tr > td {
     display: block;
   }
 }
-.page .cover {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  justify-content: center;
-  -webkit-flex-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-  position: relative;
-  width: 100%;
-  height: 300px;
-  overflow: hidden;
-}
-@media (min-width: 992px) {
-  .page .cover {
-    height: 400px;
-  }
-}
 @media (min-width: 992px) {
   .blog img.wp-post-image,
   .archive img.wp-post-image {
@@ -6869,9 +6897,6 @@ table > tfoot > tr > td {
     width: 33.33333333333333%;
     clear: both;
   }
-}
-.sticky {
-  margin: 0 0 12px;
 }
 @media (min-width: 992px) {
   .blog .sticky img.wp-post-image {
