@@ -16,10 +16,10 @@ If you're making changes to the theme, simply extract the files on your computer
 ## Changelog 
 
 ### v1.1.5:
-Tweak: Move images to scaffolding file
-Tweak: Remove Google Font link from header
-Tweak: Format form submit button
-Tweak: Add entry-header and entry-footers to content templates
+Tweak: Move images to scaffolding file<br>
+Tweak: Remove Google Font link from header<br>
+Tweak: Format form submit button<br>
+Tweak: Add entry-header and entry-footers to content templates<br>
 Tweak: Convert to static navbar and css cleanup
 
 ### v1.1.4:
