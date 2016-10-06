@@ -6543,29 +6543,11 @@ button.close {
   }
 }
 .container > .row {
-  padding: 120px 0 30px;
+  padding: 24px 0 30px;
 }
 @media (min-width: 992px) {
   .container > .row {
-    padding: 120px 0 30px;
-  }
-}
-.page .container > .row {
-  /* change spacing to accommodate cover images on pages */
-  padding: 72px 0 0;
-}
-@media (min-width: 992px) {
-  .page .container > .row {
     padding: 72px 0 30px;
-  }
-}
-.page .container.no-cover > .row {
-  /* change spacing to accommodate main navbar when no cover images are placed on pages */
-  padding: 122px 0 0;
-}
-@media (min-width: 992px) {
-  .page .container.no-cover > .row {
-    padding: 122px 0 30px;
   }
 }
 .post {
@@ -6614,36 +6596,18 @@ img {
   align-items: center;
   position: relative;
   width: 100%;
-  height: 300px;
+  height: 200px;
   overflow: hidden;
 }
 @media (min-width: 992px) {
   .page .cover {
+    height: 300px;
+  }
+}
+@media (min-width: 1200px) {
+  .page .cover {
     height: 400px;
   }
-}
-@media (min-width: 992px) {
-  .blog img.wp-post-image,
-  .archive img.wp-post-image {
-    float: left;
-    margin: 0 24px 0 0;
-    width: 33.33333333333333%;
-    clear: both;
-  }
-}
-.sticky {
-  margin: 0 0 12px;
-}
-@media (min-width: 992px) {
-  .blog .sticky img.wp-post-image {
-    float: none;
-    margin: 0 0 24px;
-    width: 100%;
-    clear: both;
-  }
-}
-.single img.wp-post-image {
-  margin-bottom: 24px;
 }
 @media (min-width: 992px) {
   h1.page-title,
@@ -6787,15 +6751,17 @@ p.gallery-caption {
 .next {
   float: right;
 }
-button.search-submit,
-input.button {
+input.button,
+input[type=submit],
+button.search-submit {
   padding: 1px 12px;
   color: #595959;
   background-color: #eeeeee;
   border: 1px solid #595959;
 }
-button.search-submit:hover,
-input.button:hover {
+input.button:hover,
+input[type=submit]:hover,
+button.search-submit:hover {
   color: #fff;
   background-color: #222222;
 }
@@ -6899,7 +6865,7 @@ table > tfoot > tr > td {
   }
 }
 @media (min-width: 992px) {
-  .blog .sticky img.wp-post-image {
+  .sticky img.wp-post-image {
     float: none;
     margin: 0 0 24px;
     width: 100%;

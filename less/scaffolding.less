@@ -3,21 +3,9 @@
 // --------------------------------------------------
 
 .container > .row {
-	padding: (@padding-base-vertical * 20) 0 (@padding-base-vertical * 5); 
+	padding: (@padding-base-vertical * 4) 0 (@padding-base-vertical * 5); 
 	@media (min-width: @screen-md-min) {
-		padding: (@padding-base-vertical * 20) 0 (@padding-base-vertical * 5) ; 
-	}
-}
-.page .container > .row { /* change spacing to accommodate cover images on pages */
-	padding: (@padding-base-vertical * 12) 0 0; 
-	@media (min-width: @screen-md-min) {
-		padding: (@padding-base-vertical * 12) 0 (@padding-base-vertical * 5); 
-	}
-}
-.page .container.no-cover > .row { /* change spacing to accommodate main navbar when no cover images are placed on pages */ 
-	padding: ((@padding-base-vertical * 12) + @navbar-height) 0 0; 
-	@media (min-width: @screen-md-min) {
-		padding: ((@padding-base-vertical * 12) + @navbar-height) 0 (@padding-base-vertical * 5); 
+		padding: (@padding-base-vertical * 12) 0 (@padding-base-vertical * 5) ; 
 	}
 }
 .post {
@@ -72,34 +60,12 @@ img {
 	align-items: center;
 	position: relative; 
 	width: 100%; 
-	height: 300px; 
+	height: 200px; 
 	overflow: hidden; 
 	@media (min-width: @screen-md-min) {
+		height: 300px; 	
+	}
+	@media (min-width: @screen-lg-min) {
 		height: 400px; 	
 	}
-}
-
-// Post featured images 
-.blog img.wp-post-image,
-.archive img.wp-post-image {
-	@media (min-width: @screen-md-min) {
-		float: left; 
-		margin: 0 @line-height-computed 0 0; 
-		width: 33.33333333333333%; 
-		clear: both; 
-	}
-}
-.sticky {
-		margin: 0 0 (@line-height-computed / 2); 
-}
-.sticky img.wp-post-image {
-	@media (min-width: @screen-md-min) {
-		float: none; 
-		margin: 0 0 @line-height-computed; 
-		width: 100%; 
-		clear: both; 
-	}
-}
-.single img.wp-post-image {
-	margin-bottom: @line-height-computed; 
 }
