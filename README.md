@@ -15,6 +15,13 @@ If you're making changes to the theme, simply extract the files on your computer
 
 ## Changelog 
 
+### v1.1.5:
+Tweak: Move images to scaffolding file
+Tweak: Remove Google Font link from header
+Tweak: Format form submit button
+Tweak: Add entry-header and entry-footers to content templates
+Tweak: Convert to static navbar and css cleanup
+
 ### v1.1.4:
 Tweak: Set blockquote to 100% width on all screen widths<br>
 Tweak: Add alignment styles .alignright, .alignleft, .aligncenter<br>
