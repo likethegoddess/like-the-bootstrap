@@ -3,21 +3,9 @@
 // --------------------------------------------------
 
 .container > .row {
-	padding: (@padding-base-vertical * 20) 0 (@padding-base-vertical * 5); 
+	padding: (@padding-base-vertical * 4) 0 (@padding-base-vertical * 5); 
 	@media (min-width: @screen-md-min) {
-		padding: (@padding-base-vertical * 20) 0 (@padding-base-vertical * 5) ; 
-	}
-}
-.page .container > .row { /* change spacing to accommodate cover images on pages */
-	padding: (@padding-base-vertical * 12) 0 0; 
-	@media (min-width: @screen-md-min) {
-		padding: (@padding-base-vertical * 12) 0 (@padding-base-vertical * 5); 
-	}
-}
-.page .container.no-cover > .row { /* change spacing to accommodate main navbar when no cover images are placed on pages */ 
-	padding: ((@padding-base-vertical * 12) + @navbar-height) 0 0; 
-	@media (min-width: @screen-md-min) {
-		padding: ((@padding-base-vertical * 12) + @navbar-height) 0 (@padding-base-vertical * 5); 
+		padding: (@padding-base-vertical * 12) 0 (@padding-base-vertical * 5) ; 
 	}
 }
 .post {
@@ -48,4 +36,36 @@
 .aligncenter {
 	display: block; 
 	margin: @line-height-computed auto; 
+}
+
+// Images
+
+img {
+	display: block; 
+	max-width: 100%;
+	height: auto;
+}
+
+// Page featured image
+.page .cover {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	justify-content:center;
+	-webkit-flex-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+	position: relative; 
+	width: 100%; 
+	height: 200px; 
+	overflow: hidden; 
+	@media (min-width: @screen-md-min) {
+		height: 300px; 	
+	}
+	@media (min-width: @screen-lg-min) {
+		height: 400px; 	
+	}
 }
