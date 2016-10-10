@@ -47,7 +47,7 @@ add_action('after_setup_theme', 'likethebootstrap_theme_support');
 
 // sets max image width inserted into a post
 if ( ! isset( $content_width ) )
- $content_width = 750;
+ $content_width = 1140;
 
 /* Return entry meta information for posts, used by multiple loops. */ 
 if(!function_exists('likethebootstrap_entry_meta')) :
