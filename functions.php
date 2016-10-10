@@ -45,6 +45,10 @@ function likethebootstrap_theme_support() {
 }
 add_action('after_setup_theme', 'likethebootstrap_theme_support'); 
 
+// sets max image width inserted into a post
+if ( ! isset( $content_width ) )
+ $content_width = 750;
+
 /* Return entry meta information for posts, used by multiple loops. */ 
 if(!function_exists('likethebootstrap_entry_meta')) :
 	function likethebootstrap_entry_meta() {
@@ -112,5 +116,70 @@ function new_excerpt_more( $more ) {
   return '&nbsp;&nbsp;&nbsp;<a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('Continue&nbsp;reading', 'like-the-bootstrap') . '&rarr;</a>';
 }
 add_filter( 'excerpt_more', 'new_excerpt_more' );
+
+if ( ! function_exists( 'likethebootstrap_comment' ) ) :
+/**
+ * Template for comments and pingbacks
+ *
+ * To override this walker in a child theme without modifying the comments template
+ * simply create your own bootstrapcanvaswp_comment(), and that function will be used instead.
+ *
+ * Used as a callback by wp_list_comments() for displaying the comments.
+ *
+ * @since Bootstrap Canvas WP 1.0
+ */
+function likethebootstrap_comment( $comment, $args, $depth ) {
+  $GLOBALS['comment'] = $comment;
+  switch ( $comment->comment_type ) :
+	case 'pingback' :
+	case 'trackback' :
+	// Display trackbacks differently than normal comments.
+  ?>
+  <li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
+	<p><?php _e( 'Pingback:', 'like-the-bootstrap' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( 'Edit', 'like-the-bootstrap' ), '<span class="comment-meta edit-link"><i class="fa fa-pencil"></i> ', '</span>' ); ?></p>
+  <?php
+	break;
+	default :
+	// Proceed with normal comments.
+	global $post;
+  ?>
+  <li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
+	<article id="comment-<?php comment_ID(); ?>" class="comment">
+      <header class="comment-meta comment-author vcard">
+        <?php
+            echo get_avatar( $comment, 44 );
+            printf( ' <cite><b class="fn">%1$s</b> %2$s</cite>',
+                get_comment_author_link(),
+                // If current post author is also comment author, make it known visually.
+                ( $comment->user_id === $post->post_author ) ? '<span>' . __( 'Post author', 'like-the-bootstrap' ) . '</span>' : ''
+            );
+            printf( '<i class="fa fa-calendar"></i> <a href="%1$s"><time datetime="%2$s">%3$s</time></a>',
+                esc_url( get_comment_link( $comment->comment_ID ) ),
+                get_comment_time( 'c' ),
+                /* translators: 1: date, 2: time */
+                sprintf( __( '%1$s at %2$s', 'like-the-bootstrap' ), get_comment_date(), get_comment_time() )
+            );
+        ?>
+      </header><!-- .comment-meta -->
+
+      <?php if ( '0' == $comment->comment_approved ) : ?>
+        <p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'like-the-bootstrap' ); ?></p>
+      <?php endif; ?>
+
+      <section class="comment-content comment">
+        <?php comment_text(); ?>
+        <?php edit_comment_link( __( 'Edit', 'like-the-bootstrap' ), '<p class="comment-meta edit-link"><i class="fa fa-pencil"></i> ', '</p>' ); ?>
+      </section><!-- .comment-content -->
+
+      <div class="reply">
+		<?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply', 'like-the-bootstrap' ), 'after' => ' <span>&darr;</span>', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+	  </div><!-- .reply -->
+      <hr />
+	</article><!-- #comment-## -->
+<?php
+    break;
+  endswitch; // end comment_type check
+}
+endif;
 
 ?>

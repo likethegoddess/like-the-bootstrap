@@ -10,7 +10,7 @@
 	<footer class="entry-footer">
 		<?php edit_post_link(
 				sprintf(
-					__( 'Edit<span class="screen-reader-text"> "%s"</span>', 'like-the-goddess' ),
+					__( 'Edit<span class="screen-reader-text"> "%s"</span>', 'like-the-bootstrap' ),
 					get_the_title()
 				),
 				'<span class="edit-link">',
@@ -18,5 +18,7 @@
 			);
 		?>
 	</footer><!-- .entry-footer -->
+
+	<?php comments_template(); ?>
 
 </article>

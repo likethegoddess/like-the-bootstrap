@@ -100,6 +100,16 @@ ol {
     margin-right: 8.33333333333333%; 
 	}
 }
+// Description Lists
+dl {
+  margin-top: 0; // Remove browser default
+  margin-bottom: @line-height-computed;
+}
+dd {
+  margin-left: 0; // Undo browser default
+	padding-left: (@padding-base-horizontal * 2); 
+}
+
 
 // Misc
 // -------------------------
@@ -142,15 +152,15 @@ p.metadata {
 .category {
 	margin-right: (@line-height-computed * .4375); 
 }
-.fa {
+.metadata .fa {
 	display: inline; 
 }
-.fa-user {
+.metadata .fa-user {
 	margin-right: (@line-height-computed * .125); 
 }
-.fa-calendar,
-.fa-folder,
-.fa-tag {
+.metadata .fa-calendar,
+.metadata .fa-folder,
+.metadata .fa-tag {
 	margin-right: (@line-height-computed * .25); 
 }
 // Image Captions
@@ -162,14 +172,18 @@ p.gallery-caption {
 	font-size: (@font-size-base * .9375); 
 	margin-top: (@line-height-computed * .25); 
 }
+.alignleft p.wp-caption-text,
+.alignleft p.gallery-caption,
+.alignright p.wp-caption-text,
+.alignright p.gallery-caption {
+	margin-bottom: 0; 
+}
 
-// Next/Previous Navigation
-.next-previous-navigation {
-	margin: @line-height-computed 0 (@line-height-computed * 3); 
+// Comments
+.comment-list li {
+	list-style-type: none;
 }
-.previous {
-	float: left; 
-}
-.next {
-	float: right; 
+.comment-meta cite {
+	font-style: normal; 
+	padding-right: (@padding-base-vertical * 1.5);
 }

@@ -12,6 +12,7 @@
     <![endif]-->
 
 		<script src="https://use.fontawesome.com/6a77217615.js"></script>
+		<?php if ( is_singular() ) wp_enqueue_script( "comment-reply" ); ?>
     <?php wp_head(); ?>
   </head>
 	<body <?php body_class(); ?>>
