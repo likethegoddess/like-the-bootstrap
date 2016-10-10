@@ -5,7 +5,7 @@ Description: A responsive theme built with Bootstrap and Less
 Author: Diana Thompson
 Author URI: http://likethegoddess.com
 Text Domain: like-the-bootstrap
-Version: 1.1.5
+Version: 1.2.0
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Tags: grid-layout, one-column, two-columns, right-sidebar, featured-images, footer-widgets, full-width-template, post-formats, blog
@@ -6583,6 +6583,21 @@ img {
   max-width: 100%;
   height: auto;
 }
+.size-auto,
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail {
+  max-width: 100%;
+  height: auto;
+}
+@media (min-width: 992px) {
+  .comment-meta img {
+    display: inline;
+    float: left;
+    margin: 6px 15px 12px 0;
+  }
+}
 .page .cover {
   display: -webkit-box;
   display: -webkit-flex;
@@ -6608,6 +6623,21 @@ img {
   .page .cover {
     height: 400px;
   }
+}
+.single .entry-footer {
+  margin: 24px 0 84px;
+}
+.previous {
+  float: left;
+}
+.next {
+  float: right;
+}
+#comments {
+  margin-top: 36px;
+}
+.comment-list {
+  padding-left: 0;
 }
 @media (min-width: 992px) {
   h1.page-title,
@@ -6688,6 +6718,14 @@ ol ol {
     margin-right: 8.33333333333333%;
   }
 }
+dl {
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+dd {
+  margin-left: 0;
+  padding-left: 24px;
+}
 abbr[title] {
   border-bottom: none !important;
   cursor: inherit !important;
@@ -6723,15 +6761,15 @@ p.metadata.category {
 .category {
   margin-right: 10.5px;
 }
-.fa {
+.metadata .fa {
   display: inline;
 }
-.fa-user {
+.metadata .fa-user {
   margin-right: 3px;
 }
-.fa-calendar,
-.fa-folder,
-.fa-tag {
+.metadata .fa-calendar,
+.metadata .fa-folder,
+.metadata .fa-tag {
   margin-right: 6px;
 }
 .wp-caption {
@@ -6742,14 +6780,18 @@ p.gallery-caption {
   font-size: 14.0625px;
   margin-top: 6px;
 }
-.next-previous-navigation {
-  margin: 24px 0 72px;
+.alignleft p.wp-caption-text,
+.alignleft p.gallery-caption,
+.alignright p.wp-caption-text,
+.alignright p.gallery-caption {
+  margin-bottom: 0;
 }
-.previous {
-  float: left;
+.comment-list li {
+  list-style-type: none;
 }
-.next {
-  float: right;
+.comment-meta cite {
+  font-style: normal;
+  padding-right: 9px;
 }
 input.button,
 input[type=submit],
