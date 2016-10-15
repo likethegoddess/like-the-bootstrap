@@ -6543,11 +6543,29 @@ button.close {
   }
 }
 .container > .row {
-  padding: 24px 0 30px;
+  padding: 120px 0 30px;
 }
 @media (min-width: 992px) {
   .container > .row {
+    padding: 120px 0 30px;
+  }
+}
+.page .container > .row {
+  /* change spacing to accommodate cover images on pages */
+  padding: 72px 0 0;
+}
+@media (min-width: 992px) {
+  .page .container > .row {
     padding: 72px 0 30px;
+  }
+}
+.page .container.no-cover > .row {
+  /* change spacing to accommodate main navbar when no cover images are placed on pages */
+  padding: 122px 0 0;
+}
+@media (min-width: 992px) {
+  .page .container.no-cover > .row {
+    padding: 122px 0 30px;
   }
 }
 .post {
