@@ -5,7 +5,7 @@ Description: A responsive theme built with Bootstrap and Less
 Author: Diana Thompson
 Author URI: http://likethegoddess.com
 Text Domain: like-the-bootstrap
-Version: 1.2.0
+Version: 1.2.0.3
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Tags: grid-layout, one-column, two-columns, right-sidebar, featured-images, footer-widgets, full-width-template, post-formats, blog
@@ -6541,6 +6541,9 @@ button.close {
   .hidden-print {
     display: none !important;
   }
+}
+body {
+  padding-top: 50px;
 }
 .container > .row {
   padding: 120px 0 30px;
