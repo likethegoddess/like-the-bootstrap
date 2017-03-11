@@ -5,7 +5,7 @@ Template name: Full Width
 get_header(); ?>
 
 <div class="row">
-	<div class="col-sm-12" role="main">
+	<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2" role="main">
 	<?php if ( have_posts() ) : ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 			<?php get_template_part( 'content-page', get_post_format() ); ?>
