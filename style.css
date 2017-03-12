@@ -6836,41 +6836,45 @@ footer .navbar-nav > li > a:focus {
   list-style: none;
   padding-left: 0;
 }
-table > thead > tr > th,
-table > tbody > tr > th,
-table > tfoot > tr > th,
-table > thead > tr > td,
-table > tbody > tr > td,
-table > tfoot > tr > td {
+.main-content table > thead > tr > th,
+.main-content table > tbody > tr > th,
+.main-content table > tfoot > tr > th,
+.main-content table > thead > tr > td,
+.main-content table > tbody > tr > td,
+.main-content table > tfoot > tr > td {
   padding: 8px;
   line-height: 1.61803399;
   vertical-align: top;
 }
 @media (min-width: 1200px) {
-  .page-template-page-full .entry-content table {
+  .main-content .page-template-page-full .entry-content table {
     margin-left: 8.33333333333333%;
     margin-right: 8.33333333333333%;
   }
 }
 @media screen and (max-width: 767px) {
-  table > tbody > tr:nth-of-type(odd) {
+  .main-content table > tbody > tr:nth-of-type(odd) {
     background-color: #f9f9f9;
   }
 }
 @media screen and (max-width: 767px) {
-  table > thead > tr,
-  table > tbody > tr,
-  table > tfoot > tr {
+  .main-content table > thead > tr,
+  .main-content table > tbody > tr,
+  .main-content table > tfoot > tr {
     width: 100%;
   }
-  table > thead > tr > th,
-  table > tbody > tr > th,
-  table > tfoot > tr > th,
-  table > thead > tr > td,
-  table > tbody > tr > td,
-  table > tfoot > tr > td {
+  .main-content table > thead > tr > th,
+  .main-content table > tbody > tr > th,
+  .main-content table > tfoot > tr > th,
+  .main-content table > thead > tr > td,
+  .main-content table > tbody > tr > td,
+  .main-content table > tfoot > tr > td {
     display: block;
   }
+}
+#wp-calendar,
+#wp-calendar caption {
+  width: 100%;
 }
 @media (min-width: 992px) {
   .blog img.wp-post-image,
