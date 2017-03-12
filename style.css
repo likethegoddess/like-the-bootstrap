@@ -6546,11 +6546,16 @@ body {
   padding-top: 50px;
 }
 .container > .row {
-  padding: 120px 0 30px;
+  padding: 24px 0 36px;
 }
 @media (min-width: 992px) {
   .container > .row {
-    padding: 120px 0 30px;
+    padding: 36px 0 54px;
+  }
+}
+@media (min-width: 992px) {
+  .container > .row {
+    padding: 60px 0 90px;
   }
 }
 .post {
