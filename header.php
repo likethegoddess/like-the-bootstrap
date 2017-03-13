@@ -41,19 +41,6 @@
 					'walker'            => new wp_bootstrap_navwalker())
 				);
 			?>
-			<?php
-				wp_nav_menu( array(
-					'menu'              => 'secondary',
-					'theme_location'    => 'secondary',
-					'depth'             => 2,
-					'container'         => 'div',
-					'container_class'   => 'collapse navbar-collapse',
-					'container_id'      => 'secondary-navbar-collapse',
-					'menu_class'        => 'nav navbar-nav',
-					'fallback_cb'       => 'wp_bootstrap_navwalker_2::fallback',
-					'walker'            => new wp_bootstrap_navwalker_2())
-				);
-			?>
     </div>
 	</nav>
 <?php if ( has_post_thumbnail() && is_page() ) { ?>

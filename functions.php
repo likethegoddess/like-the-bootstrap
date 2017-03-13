@@ -32,7 +32,6 @@ function likethebootstrap_theme_support() {
 
 	/* Register custom navigation walker */
 	require_once('inc/wp_bootstrap_navwalker.php');
-	require_once('inc/wp_bootstrap_navwalker_2.php');
 
 	/* Add menus support  */
 	add_theme_support('menus');
