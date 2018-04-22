@@ -5,7 +5,7 @@ Description: A responsive theme built with Bootstrap and Less
 Author: Diana Thompson
 Author URI: http://likethegoddess.com
 Text Domain: like-the-bootstrap
-Version: 1.2.0
+Version: 1.2.0.3
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Tags: grid-layout, one-column, two-columns, right-sidebar, featured-images, footer-widgets, full-width-template, post-formats, blog
@@ -1430,7 +1430,7 @@ dt {
 dd {
   margin-left: 0;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .dl-horizontal dt {
     float: left;
     width: 160px;
@@ -3514,7 +3514,7 @@ tbody.collapse.in {
   bottom: 100%;
   margin-bottom: 2px;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .navbar-right .dropdown-menu {
     left: auto;
     right: 0;
@@ -4046,12 +4046,12 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin-bottom: 24px;
   border: 1px solid transparent;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .navbar {
     border-radius: 4px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .navbar-header {
     float: left;
   }
@@ -4067,7 +4067,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-collapse.in {
   overflow-y: auto;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .navbar-collapse {
     width: auto;
     border-top: 0;
@@ -4107,7 +4107,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin-right: -15px;
   margin-left: -15px;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .container > .navbar-header,
   .container-fluid > .navbar-header,
   .container > .navbar-collapse,
@@ -4120,7 +4120,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   z-index: 1000;
   border-width: 0 0 1px;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .navbar-static-top {
     border-radius: 0;
   }
@@ -4132,7 +4132,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   left: 0;
   z-index: 1030;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .navbar-fixed-top,
   .navbar-fixed-bottom {
     border-radius: 0;
@@ -4161,7 +4161,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-brand > img {
   display: block;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .navbar > .container .navbar-brand,
   .navbar > .container-fluid .navbar-brand {
     margin-left: -15px;
@@ -4191,7 +4191,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-toggle .icon-bar + .icon-bar {
   margin-top: 4px;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .navbar-toggle {
     display: none;
   }
@@ -4204,7 +4204,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   padding-bottom: 10px;
   line-height: 24px;
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .navbar-nav .open .dropdown-menu {
     position: static;
     float: none;
@@ -4226,7 +4226,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     background-image: none;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .navbar-nav {
     float: left;
     margin: 0;
@@ -4300,7 +4300,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     top: 0;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .navbar-form .form-group {
     margin-bottom: 5px;
   }
@@ -4308,7 +4308,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     margin-bottom: 0;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .navbar-form {
     width: auto;
     border: 0;
@@ -4348,14 +4348,14 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin-top: 13px;
   margin-bottom: 13px;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .navbar-text {
     float: left;
     margin-left: 15px;
     margin-right: 15px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .navbar-left {
     float: left !important;
   }
@@ -4422,7 +4422,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   background-color: #e7e7e7;
   color: #555;
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
     color: #777;
   }
@@ -4518,7 +4518,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   background-color: #080808;
   color: #fff;
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header {
     border-color: #080808;
   }
@@ -6542,30 +6542,20 @@ button.close {
     display: none !important;
   }
 }
+body {
+  padding-top: 50px;
+}
 .container > .row {
-  padding: 120px 0 30px;
+  padding: 24px 0 36px;
+}
+@media (min-width: 768px) {
+  .container > .row {
+    padding: 36px 0 54px;
+  }
 }
 @media (min-width: 992px) {
   .container > .row {
-    padding: 120px 0 30px;
-  }
-}
-.page .container > .row {
-  /* change spacing to accommodate cover images on pages */
-  padding: 72px 0 0;
-}
-@media (min-width: 992px) {
-  .page .container > .row {
-    padding: 72px 0 30px;
-  }
-}
-.page .container.no-cover > .row {
-  /* change spacing to accommodate main navbar when no cover images are placed on pages */
-  padding: 122px 0 0;
-}
-@media (min-width: 992px) {
-  .page .container.no-cover > .row {
-    padding: 122px 0 30px;
+    padding: 60px 0 90px;
   }
 }
 .post {
@@ -6614,32 +6604,6 @@ img {
     display: inline;
     float: left;
     margin: 6px 15px 12px 0;
-  }
-}
-.page .cover {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  justify-content: center;
-  -webkit-flex-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-  position: relative;
-  width: 100%;
-  height: 200px;
-  overflow: hidden;
-}
-@media (min-width: 992px) {
-  .page .cover {
-    height: 300px;
-  }
-}
-@media (min-width: 1200px) {
-  .page .cover {
-    height: 400px;
   }
 }
 .single .entry-footer {
@@ -6691,13 +6655,6 @@ h4.widgettitle {
 @media (min-width: 1200px) {
   .entry-content p {
     font-size: 18.75px;
-  }
-}
-@media (min-width: 1200px) {
-  .page-template-page-full .entry-content p {
-    font-size: 22.5px;
-    margin-left: 8.33333333333333%;
-    margin-right: 8.33333333333333%;
   }
 }
 @media (min-width: 768px) {
@@ -6825,6 +6782,9 @@ button.search-submit:hover {
   color: #fff;
   background-color: #222222;
 }
+footer .caret {
+  display: none;
+}
 .dropdown-menu {
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.175);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.175);
@@ -6842,15 +6802,9 @@ input[type="search"] {
 .navbar {
   margin-bottom: 0;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   #primary-navbar-collapse {
     float: left;
-    width: auto;
-  }
-}
-@media (min-width: 768px) {
-  #secondary-navbar-collapse {
-    float: right;
     width: auto;
   }
 }
@@ -6879,41 +6833,45 @@ footer .navbar-nav > li > a:focus {
   list-style: none;
   padding-left: 0;
 }
-table > thead > tr > th,
-table > tbody > tr > th,
-table > tfoot > tr > th,
-table > thead > tr > td,
-table > tbody > tr > td,
-table > tfoot > tr > td {
+.main-content table > thead > tr > th,
+.main-content table > tbody > tr > th,
+.main-content table > tfoot > tr > th,
+.main-content table > thead > tr > td,
+.main-content table > tbody > tr > td,
+.main-content table > tfoot > tr > td {
   padding: 8px;
   line-height: 1.61803399;
   vertical-align: top;
 }
 @media (min-width: 1200px) {
-  .page-template-page-full .entry-content table {
+  .main-content .page-template-page-full .entry-content table {
     margin-left: 8.33333333333333%;
     margin-right: 8.33333333333333%;
   }
 }
 @media screen and (max-width: 767px) {
-  table > tbody > tr:nth-of-type(odd) {
+  .main-content table > tbody > tr:nth-of-type(odd) {
     background-color: #f9f9f9;
   }
 }
 @media screen and (max-width: 767px) {
-  table > thead > tr,
-  table > tbody > tr,
-  table > tfoot > tr {
+  .main-content table > thead > tr,
+  .main-content table > tbody > tr,
+  .main-content table > tfoot > tr {
     width: 100%;
   }
-  table > thead > tr > th,
-  table > tbody > tr > th,
-  table > tfoot > tr > th,
-  table > thead > tr > td,
-  table > tbody > tr > td,
-  table > tfoot > tr > td {
+  .main-content table > thead > tr > th,
+  .main-content table > tbody > tr > th,
+  .main-content table > tfoot > tr > th,
+  .main-content table > thead > tr > td,
+  .main-content table > tbody > tr > td,
+  .main-content table > tfoot > tr > td {
     display: block;
   }
+}
+#wp-calendar,
+#wp-calendar caption {
+  width: 100%;
 }
 @media (min-width: 992px) {
   .blog img.wp-post-image,
